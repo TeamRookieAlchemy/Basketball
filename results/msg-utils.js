@@ -12,3 +12,17 @@ export function calculateMessage(wins) {
     const result = createMessage(wins);
     return result;
 }
+
+export function bonusMessage(posWorth){
+    if (posWorth === 289) {
+        return 'You set a proper lineup! bonus 7 wins added!';
+    } else { 
+        return 'You failed to set a proper lineup! No Bonus!';}}
+
+export function loserMessage(people){
+    if (people.length < 5) {
+        return 'You have also failed to draft 5 players, your team was penalized 7 wins!';
+    } else {
+        return ' ';
+    }
+}
